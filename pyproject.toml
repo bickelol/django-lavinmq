@@ -1,0 +1,16 @@
+[project]
+name = "bcorp-django-brokers"
+version = "0.1.0"
+description = "Project to experiment Django 6 and some brokers"
+requires-python = ">=3.12"
+dependencies = [
+    "asgiref==3.11.1",
+    "confluent-kafka>=2.15.0",
+    "django<6.0",
+    "django-environ==0.14.0",
+    "django-tasks>=0.12.0",
+    "pika>=1.4.1",
+    "psycopg[binary]>=3.3.4",
+    "sentry-sdk>=2.64.0",
+    "sqlparse==0.5.5",
+]

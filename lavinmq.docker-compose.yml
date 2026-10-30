@@ -1,0 +1,18 @@
+services:
+  lavinmq:
+    image: cloudamqp/lavinmq:latest
+    container_name: bcorp_lavinmq
+    ports:
+      - "5672:5672"   # Port AMQP pour votre code Django/Pika
+      - "15672:15672" # Port de l'interface Management UI (Console Web)
+    volumes:
+      - lavinmq_data:/var/lib/lavinmq
+    environment:
+      - LAVINMQ_DEFAULT_USER=guest
+      - LAVINMQ_DEFAULT_PASS=guest
+    restart: unless-stopped
+
+volumes:
+  lavinmq_data:
+
+
